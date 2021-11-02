@@ -4,6 +4,10 @@ alias yt-playlist='yt-dlp -x --audio-format mp3 --audio-quality 0 --yes-playlist
 alias music='ncmpcpp'
 alias ls='ls --color=auto'
 alias psa="ps -A | grep"
+alias open="xdg-open"
 alias p="pgrep -f"
 alias startsowm="startx ~/.xinitrc sowm"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias tb="nc termbin.com 9999"
+alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+alias clip='xclip -sel c'
