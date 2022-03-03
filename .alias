@@ -2,12 +2,15 @@ alias dl='yt-dlp -x --add-metadata --embed-thumbnail --audio-quality 0 --audio-f
 alias yt-chapters='yt-dlp -x --audio-format mp3 --audio-quality 0 --split-chapters -o "%(title)s - %(chapter_number)s. %(chapter)s.%(ext)s"'
 alias yt-playlist='yt-dlp -x --audio-format mp3 --audio-quality 0 --yes-playlist -o "%(title)s - %(playlist_index)s. %(playlist)s.%(ext)s"'
 alias music='ncmpcpp'
-alias ls='ls --color=auto'
+alias ls='ls -xh'
 alias psa="ps -A | grep"
 alias open="xdg-open"
 alias p="pgrep -f"
 alias startsowm="startx ~/.xinitrc sowm"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias tb="nc termbin.com 9999"
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 alias clip='xclip -sel c'
+alias startx='startx ~/.xinitrc'
+alias remove-orphans='sudo pacman -Rns $(pacman -Qqtd)'
+alias reload-xresources='xrdb ~/.Xresources'
+alias ranger='export TERM=st-mono && ranger'
