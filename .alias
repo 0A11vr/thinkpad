@@ -8,9 +8,11 @@ alias open="xdg-open"
 alias p="pgrep -f"
 alias startsowm="startx ~/.xinitrc sowm"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+#alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+alias tlmgr='tlmgr --usermode'
 alias clip='xclip -sel c'
 alias startx='startx ~/.xinitrc'
 alias remove-orphans='sudo pacman -Rns $(pacman -Qqtd)'
 alias reload-xresources='xrdb ~/.Xresources'
 alias ranger='export TERM=st-mono && ranger'
+alias isuvpn='sudo abduco -A sudo openconnect VPN01.ILSTU.EDU'

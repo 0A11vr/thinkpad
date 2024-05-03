@@ -8,11 +8,11 @@ run() {
 	fi
 }
 
-run mpd
+#run mpd
 run dunst
-run flashfocus
+#run flashfocus
 run picom
-(sleep 1s && run mpd-mpris) # needed to properly autostart
+#(sleep 1s && run mpd-mpris) # needed to properly autostart
 
 
 

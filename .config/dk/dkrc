@@ -29,38 +29,38 @@ fi
 	# use grid layout, padding, and gaps on workspace 10
 	#dkcmd set ws=10 layout=grid pad left=200 right=200 top=100 bottom=100 gap width=50
 
-	# change workspace names (default: number == name)
-	# dkcmd set \
-	# 	ws=1  name="edit" \
-	# 	ws=2  name="web" \
-	# 	ws=3  name="😀" \
-	# 	ws=4  name="😠" \
-	# 	ws=5  name="5" \
-	# 	ws=6  name="6" \
-	# 	ws=7  name="7" \
-	# 	ws=8  name="8" \
-	# 	ws=9  name="9" \
-	# 	ws=10 name="10"
-
-	# enable static workspaces and assign them to monitors (only relevant for multiple monitors)
-	# aside -
-	#		many that come from other workspace models tried dk and requested this feature
-	#		try embracing the default behaviour and allow access to any workspace from any monitor
-	#       you might end up liking it :)
-	#
-	  mon1='eDP-1'
-	  mon2='HDMI-2'
-	  dkcmd set static_ws=true \
-	  	ws=1  mon=$mon1 \
-	  	ws=2  mon=$mon1 \
-	  	ws=3  mon=$mon1 \
-	  	ws=4  mon=$mon2 \
-	  	ws=5  mon=$mon2 \
-	  	ws=6  mon=$mon2 \
-	  	ws=7  mon=$mon2 \
-	  	ws=8  mon=$mon2 \
-	  	ws=9  mon=$mon2 \
-	  	ws=10 mon=$mon2
+#	 change workspace names (default: number == name)
+#	 dkcmd set \
+#	 	ws=1  name="edit" \
+#	 	ws=2  name="web" \
+#	 	ws=3  name="😀" \
+#	 	ws=4  name="😠" \
+#	 	ws=5  name="5" \
+#	 	ws=6  name="6" \
+#	 	ws=7  name="7" \
+#	 	ws=8  name="8" \
+#	 	ws=9  name="9" \
+#	 	ws=10 name="10"
+#
+#	 enable static workspaces and assign them to monitors (only relevant for multiple monitors)
+#	 aside -
+#			many that come from other workspace models tried dk and requested this feature
+#			try embracing the default behaviour and allow access to any workspace from any monitor
+#	       you might end up liking it :)
+	
+	      mon1='eDP-1'
+	      mon2='HDMI-2'
+	      dkcmd set static_ws=true \
+#	      	ws=1  mon=$mon1 \
+#	      	ws=2  mon=$mon1 \
+#	    	ws=3  mon=$mon1 \
+#	      	ws=4  mon=$mon2 \
+#	      	ws=5  mon=$mon2 \
+#	      	ws=6  mon=$mon2 \
+#	      	ws=7  mon=$mon2 \
+#	      	ws=8  mon=$mon2 \
+#	      	ws=9  mon=$mon2 \
+#	      	ws=10 mon=$mon2
 
 
 	# global settings
@@ -117,11 +117,12 @@ fi
 	# open window(s) and use a callback function (user defined in config.h)
 	# we also ignore=true to stop the window from being resized on it's own from events
 	# eg. mpv --x11-name=albumart /path/to/media
-	dkcmd rule class="^mpv$" instance="^albumart$" float=true ignore=true callback=albumart bw=0
+	#dkcmd rule class="^mpv$" instance="^albumart$" float=true ignore=true callback=albumart bw=0 ignore is broken what did it do?
+	dkcmd rule class="^mpv$" instance="^albumart$" float=true  callback=albumart bw=0
 
 	# open window(s) in a floating state
 	dkcmd rule class="^(pavucontrol|transmission-gtk|steam|lxappearance|mpv|st-float|\
-Galculator|Lxappearance)$" float=true
+Galculator|Lxappearance|viewnior)$" float=true
 
 	# open window(s) with a specific geometry and coordinates (floating only!)
 	#dkcmd rule class="^google-chrome$" title="^open files$" float=true w=1280 h=720

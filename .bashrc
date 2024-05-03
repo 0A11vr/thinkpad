@@ -18,4 +18,6 @@ HISTFILESIZE=10000
 # shellcheck disable=SC1091
 [ -f  /usr/share/bash-complete-alias/complete_alias ] \
         && . /usr/share/bash-complete-alias/complete_alias; \
-        complete -F _complete_alias config 
+        complete -F _complete_alias config
+
+source /usr/share/fzf/completion.bash && source /usr/share/fzf/key-bindings.bash

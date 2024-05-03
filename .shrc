@@ -24,17 +24,16 @@ fi
 
 source ~/.alias
 export _JAVA_AWT_WM_NONREPARENTING=1
-export PATH="$HOME/.local/bin:$PATH"
 export LESSHISTFILE=-
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export SSB_HOME="$XDG_DATA_HOME"/zoom
-export EDITOR=vim
+export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info
+#export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man
 
 
 
 
-
-#PS1='$ '
+PS1='$ '
 #PS1='$ '
 #PS1='[\u@\h \W]\$ '
 #PS1='[$USER@$(cat /proc/sys/kernel/hostname) ~]\$ '
